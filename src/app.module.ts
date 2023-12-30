@@ -3,7 +3,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { MercuriusFederationDriver, MercuriusFederationDriverConfig } from '@nestjs/mercurius';
 import { ConfigModule } from '@config/config.module';
-import { CompanyModule } from '@modules/company/company.module';
+import { TestModule } from '@modules/test/test.module';
 import { CompanyDto } from '@src/infrastructure/dtos/shared/company.dto';
 
 @Module({
@@ -37,7 +37,7 @@ import { CompanyDto } from '@src/infrastructure/dtos/shared/company.dto';
       }),
     }),
     ConfigModule,
-    CompanyModule,
+    TestModule,
   ],
 })
 export class AppModule {
