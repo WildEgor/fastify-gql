@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  fastify-gql-service:
+    build:
+      context: .
+      target: dev
+      dockerfile: Dockerfile
+    restart: always
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - "9053:9053"
