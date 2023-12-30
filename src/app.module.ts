@@ -19,7 +19,7 @@ import { CompanyDto } from '@src/infrastructure/dtos/shared/company.dto';
           path: path.join(process.cwd(), 'graphql', 'schema.graphql'),
         },
         graphiql: true,
-        context: (ctx) => ({ ctx }),
+        context: (ctx): unknown => ({ ctx }),
         // definitions: {
         //   path: join(process.cwd(), 'src/graphql.classes.ts'),
         //   outputAs: 'class',
@@ -29,7 +29,7 @@ import { CompanyDto } from '@src/infrastructure/dtos/shared/company.dto';
           credentials: true,
         },
         subscription: {
-          onConnect: (connectionParams) => connectionParams?.payload,
+          onConnect: (connectionParams): unknown => connectionParams?.payload,
         },
         buildSchemaOptions: {
           orphanedTypes: [CompanyDto],

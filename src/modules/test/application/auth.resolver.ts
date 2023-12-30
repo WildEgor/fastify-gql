@@ -1,4 +1,4 @@
-import { Args, Resolver } from '@nestjs/graphql';
+import { Resolver } from '@nestjs/graphql';
 import { ApiRegisterMobile } from '@modules/test/infrastucture/api/register-mobile.api';
 import { Input } from '@src/infrastructure/decorators/gql/input.decorator';
 import { RegisterMobileInput } from '@modules/test/infrastucture/dtos/register-mobile.dto';
